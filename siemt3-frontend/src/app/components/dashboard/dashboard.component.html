@@ -1,0 +1,17 @@
+<mat-tab-group>
+    <mat-tab label="Alerts" aria-label=white>
+        <app-alerts></app-alerts>
+    </mat-tab>
+    <mat-tab label="Charts"> 
+        <charts></charts> 
+    </mat-tab>
+    <mat-tab label="Thresholds">
+        <thresholds></thresholds>
+    </mat-tab>
+</mat-tab-group>
+
+<div class="container">
+    <div class = "vertical-center">
+        <button mat-flat-button class="indigobutton" (click)="logout()">Log out</button>
+    </div>
+</div>
