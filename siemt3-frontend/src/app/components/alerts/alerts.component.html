@@ -1,0 +1,42 @@
+<div class=table-container>
+    <mat-table [dataSource]="pageSlice" class="mat-elevation-z2">
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="eventId">
+            <mat-header-cell *matHeaderCellDef> Event ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.eventId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="eventType">
+            <mat-header-cell *matHeaderCellDef> Event Type </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.eventType}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="eventName">
+            <mat-header-cell *matHeaderCellDef> Event Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.eventName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="priority">
+            <mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.priority}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let alert; columns: displayedColumns;" [ngClass]="{'is-critical' : alert.priority === 3}" 
+        [routerLink]="['/alerts', alert.id]"></mat-row>
+    </mat-table>
+
+    <mat-paginator [length]="alerts.length"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="OnPageChange($event)">
+    </mat-paginator>
+</div>
