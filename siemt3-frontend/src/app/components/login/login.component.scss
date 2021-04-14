@@ -1,0 +1,59 @@
+.login-container {
+    display: flex;
+    padding: 20px 0 0 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+}
+
+.in-block{
+    width: 500px;
+    margin-bottom: 1cm;
+    padding: 10px;
+    border: 3px;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.label {
+    color: white;
+}
+
+.login-button {
+    width: 100px;
+    margin: 1cm 0 1cm 0;
+    background-color: indigo;
+    color: white;
+}
+
+.div-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-divider {
+    border-right-color:grey;
+    margin: 0 1cm;
+}
+
+h1{
+    margin-left: 10px;
+}
+
+a {
+    margin-left: 5px;
+    color: white;
+}
+
