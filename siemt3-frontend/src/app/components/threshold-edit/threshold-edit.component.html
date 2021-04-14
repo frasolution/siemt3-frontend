@@ -1,0 +1,25 @@
+<form *ngIf="thresholdForm" [formGroup]="thresholdForm" class="myform">
+    <div>
+        <mat-form-field class="whity" appearance="fill" [floatLabel]="'ID'">
+            <mat-label class="whity">ID</mat-label>
+            <input class="whity" matInput type="number" formControlName="id">
+        </mat-form-field>
+        <mat-form-field class="whity"appearance="fill" [floatLabel]="'Name'">
+            <mat-label class="whity">Name</mat-label>
+            <input class="whity" matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field class="whity" appearance="fill" [floatLabel]="'Type'">
+            <mat-label class="whity">Type</mat-label>
+            <input class="whity" matInput formControlName="type">
+        </mat-form-field>
+        <mat-form-field class="whity" appearance="fill" [floatLabel]="'Number'">
+            <mat-label class="whity">number</mat-label>
+            <input class="whity" matInput type="number" min="1" formControlName="number">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <button class="indigobutton" mat-flat-button [disabled]="thresholdForm.invalid" (click)="save()">Save</button>
+        <button class="indigobutton" mat-flat-button (click)="back()">Back</button>
+    </div>
+</form>
