@@ -1,0 +1,42 @@
+.table-container{
+    margin: 40px;
+}
+
+.mat-table{
+    background-color: #333;
+}
+.ng-container{
+    color:white;
+} 
+
+.mat-header-cell{
+    background-color: indigo;
+    font-size:20px;
+    color:white;
+} 
+
+.mat-cell{
+    color:white;
+} 
+
+.is-critical{
+    background-color: rgb(85, 29, 29);
+}
+
+.mat-paginator {
+    background-color: #333;
+    color: white;
+    
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: transparent;
+}
+
+::ng-deep .mat-select-value {
+    color: white;
+}
+
+::ng-deep .mat-select-arrow {
+    color: white;
+}

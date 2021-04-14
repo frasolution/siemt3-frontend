@@ -1,0 +1,27 @@
+<div class=table-container>
+    <mat-table [dataSource]="thresholds" class="mat-elevation-z2">
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+            <mat-header-cell *matHeaderCellDef> number </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.number}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let threshold; columns: displayedColumns;"  
+        [routerLink]="['/thresholds', threshold.id]"></mat-row>
+    </mat-table>
+</div>
